@@ -35,7 +35,52 @@ public class Lab3P1_AndreaPosse {
          
          switch (x) {
          case 1: ;
-             //System.out.println(primer ejercicio);
+             
+             int m = 0; // esta es donde se guarda el valor que ingresa el usuario 
+             System.out.println("Ingrese un Impar Mayor o igual a 7 ");
+              m = sc.nextInt();
+              int anterior = m-1;
+              int espacio = 2;
+             
+             //% es lo que comprueba que un numero es par o impar
+             // si el residuo da un 0 al dividir es par 
+             // si el residuo da un 1 al dividir es impar
+             // siempre que quieras comprobar que un numero es impar hace eso
+             
+             
+             if ( m%2 != 0 && m>= 7) {
+               
+                 // hacer un for que imprima los numero horizontal y un vertical 
+                 
+                 for (int i = 0; i < m; i++){
+                     
+                     
+                      for (int j = 0; j< m; j++){
+                          
+                         if (i == 0 || i == anterior){
+                         System.out.print(" - ");
+                         }
+                         else if (j < i || j > anterior - i ){
+                                   System.out.print("  ");
+                                   
+                         } else if(( j > i || j <= anterior - i )&& j != i && j != anterior - i ) {
+                               System.out.print(" * ");
+                           }
+                          else if (j == i || j == anterior - i ){
+                             System.out.print(" + ");
+                             
+                         }
+                     }
+                     System.out.println(); // esto hace un salto de linea entonces lo que hace
+                     // es imprimirtelo en una linea abajo sin la necesidad de poner algo adentro
+                     // de el 
+                 } 
+    
+              } else {
+                 System.out.println("Numero par no permitidos ");
+             }
+             
+         
               break;
               
          case 2: ;
@@ -80,9 +125,7 @@ public class Lab3P1_AndreaPosse {
                      
                   }
                   // formula 
-                   System.out.println(nf);
-                   System.out.println(nr);
-                   System.out.println(fb);
+                  
                   c = nf/(fb*nr);
                       
                   }
@@ -110,8 +153,8 @@ public class Lab3P1_AndreaPosse {
                      
                      for (int j = 0; j< d; j++){
                          
-                         if (i == j){
-                         System.out.print(" ");
+                         if (i == j ){
+                         System.out.print("  ");
                          
                          
                          } else {
@@ -143,6 +186,7 @@ public class Lab3P1_AndreaPosse {
              // switch \
          }
           }while (x != 4);
+        
         }
 }
 
